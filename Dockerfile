@@ -12,6 +12,11 @@ RUN npm run build
 WORKDIR /build/redsocialreact/dist
 RUN cp -rvf * /var/www/localhost/htdocs/
 
+WORKDIR /etc/apache2
+RUN cp -rvf /build/redsocialreact/httpd.conf httpd.conf
+
+
+RUN rm -rf /build
 
 RUN apk del -f git nodejs npm
 RUN rm -f /var/cache/apk/*
