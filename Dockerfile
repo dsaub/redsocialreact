@@ -25,4 +25,4 @@ RUN apk del -f git nodejs npm
 RUN rm -f /var/cache/apk/*
 
 
-CMD [ "start.sh" ]
+CMD [ "./start.sh" ]
