@@ -16,7 +16,7 @@ function User() {
         },
         body: JSON.stringify({ username: data.username })
     };
-    fetch(config["backend-protocol"]+"://"+config["backend-ip"]+":"+config["backend-port"]+"/api/v1/getUser", requestOptions)
+    fetch(config["BACKEND_URL"]+"/api/v1/getUser", requestOptions)
         .then(response => response.json())
         .then(data => {
             username = data.username;
