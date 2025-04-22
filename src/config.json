@@ -1,5 +1,5 @@
 {
     "backend-protocol": "http",
-    "backend-ip": "10.130.224.114",
+    "backend-ip": "localhost",
     "backend-port": 8081
 }

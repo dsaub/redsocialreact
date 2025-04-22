@@ -1,6 +1,6 @@
 FROM alpine:3.21.3
 
-RUN apk add apache2 git nodejs npm
+RUN apk add apache2 git nodejs npm figlet
 
 RUN mkdir /build
 WORKDIR /build
@@ -16,9 +16,13 @@ RUN cp -rvf .htaccess /var/www/localhost/htdocs/.htaccess
 WORKDIR /etc/apache2
 RUN cp -rvf /build/redsocialreact/httpd.conf httpd.conf
 
-
+RUN cp -rf /build/redsocialreact/start.sh start.sh
+RUN cp -rf /build/redsocialreact/config.example.json config.example.json
+RUN chmod +x start.sh
 RUN rm -rf /build
 
 RUN apk del -f git nodejs npm
 RUN rm -f /var/cache/apk/*
-CMD [ "httpd", "-D", "FOREGROUND" ]
+
+
+CMD [ "start.sh" ]
