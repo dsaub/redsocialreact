@@ -1,9 +1,10 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css';
 import App from './App.jsx';
 import User from './User.jsx';
 import { createBrowserRouter, RouterProvider } from "react-router";
+import User from "./User.jsx";
+import "./index.css";
 
 const router = createBrowserRouter([
     {
@@ -11,11 +12,11 @@ const router = createBrowserRouter([
         element: <App />
     },
     {
-        path: '/user/:username',
+        path: '/users/:username',
         loader: async ({params}) => {
             return {
-                name: params.username
-            };
+                username: params.username
+            }
         },
         Component: User
     }
