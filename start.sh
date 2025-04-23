@@ -4,9 +4,7 @@ figlet Red Social
 echo "    Frontend    "
 
 echo "> Writing config..."
-sed -i "s|<BACKEND_URL>|${BACKEND_URL}|g" config.example.json
-echo "> Applying config..."
-cp -rf config.example.json /var/www/localhost/htdocs/config.json
+sed -i "s|(URL)|${BACKEND_URL}|g" /var/www/localhost/htdocs/.htaccess
 
 echo "DONE! Launching Apache2 Server..."
 
