@@ -1,6 +1,6 @@
 FROM alpine:3.21.3
 
-RUN apk add apache2 git nodejs npm figlet
+RUN apk add apache2 git nodejs npm figlet curl
 
 RUN mkdir /build
 WORKDIR /build
