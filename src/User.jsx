@@ -18,16 +18,12 @@ function User() {
         body: JSON.stringify({ username: data.username })
     };
 
-    fetch("/config.json", {method: 'GET'})
-        .then(response => response.json())
-        .then(data1 => {
-            fetch(data1["BACKEND_URL"]+"/api/v1/getUser", requestOptions)
+            fetch("/api/v1/getUser", requestOptions)
                 .then(response => response.json())
                 .then(data => {
                     username = data.username;
                     fullname = data.fullname;
             });
-        });
     
     
 
