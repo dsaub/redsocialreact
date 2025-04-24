@@ -1,12 +1,10 @@
 
 
-ProxyRequests Off
-ProxyPreserveHost On
-<Location /api>
-    ProxyPass (URL)/api
-    ProxyPassReverse (URL)/api
-</Location>
 
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.html [QSA,L]
+
+RewriteRule ^/?api/(.*)$ (URL)/api/$1 [L,P]
+
+ProxyPassReverse / (URL)
