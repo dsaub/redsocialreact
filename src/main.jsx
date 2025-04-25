@@ -4,6 +4,7 @@ import App from './App.jsx';
 import { createBrowserRouter, RouterProvider } from "react-router";
 import User from "./User.jsx";
 import "./index.css";
+import FatalError from './elements/FatalError';
 
 const router = createBrowserRouter([
     {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
             }
         },
         Component: User
+    },
+    {
+        path: '/testError',
+        element: <FatalError code="TEST_ERROR" />
     }
 ])
 createRoot(document.getElementById('root')).render(

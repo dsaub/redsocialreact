@@ -7,7 +7,7 @@ function LoginBtn(props) {
         <>
             <div
                 aria-label="User Login Button"
-                tabindex="0"
+                tabIndex="0"
                 role="button"
                 className="user-profile"
                 onClick={ props.pushed }

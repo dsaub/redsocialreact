@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+#fatalError {
+    width: 30%;
+    padding: 25px 25px 25px 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    background-color: white;
+    font-family: Roboto;
+
+}
+
+#fatalError h1 {
+    margin-bottom: 25px;
+}
+
+
+.fullshadow {
+    width: 100vw;
+    height: 100vh;
+    background-color: gray;
+    opacity: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
