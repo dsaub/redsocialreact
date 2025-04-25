@@ -18,6 +18,7 @@ RUN cp -rvf /build/redsocialreact/httpd.conf httpd.conf
 
 RUN cp -rf /build/redsocialreact/start.sh start.sh
 RUN cp -rf /build/redsocialreact/config.example.json config.example.json
+RUN cp -rf /build/redsocialreact/proxy.conf proxy.conf
 RUN chmod +x start.sh
 RUN rm -rf /build
 
