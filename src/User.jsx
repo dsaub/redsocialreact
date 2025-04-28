@@ -2,7 +2,6 @@ import { useLoaderData } from "react-router";
 import MainBar from "./elements/MainBar";
 import "./User.css";
 import { useState } from "react";
-import config from "./config.json";
 import FatalError from './elements/FatalError';
 
 function User() {
@@ -17,9 +16,7 @@ function User() {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'
         },
-        mode: 'cors',
         body: JSON.stringify({ username: data.username })
     };
     try {
