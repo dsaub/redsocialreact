@@ -38,6 +38,7 @@ function User() {
             if (!crashed) {
                 try {
                     let out = response.json();
+                    console.log(out)
                     setUsername(out.username);
                     setFullname(out.fullname);
                 } catch (error) {
