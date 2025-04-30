@@ -11,8 +11,8 @@ function User() {
     const [ crashStatus, setCrashStatus ] = useState(500);
 
     let data = useLoaderData();
-    let username = "";
-    let fullname = "";
+    let [ username, setUsername ] = useState("");
+    let [ fullname, setFullname ] = useState("");
     const requestOptions = {
         method: 'POST',
         headers: {
@@ -38,8 +38,8 @@ function User() {
             if (!crashed) {
                 try {
                     let out = response.json();
-                    username = out.username;
-                    fullname = out.fullname;
+                    setUsername(out.username);
+                    setFullname(out.fullname);
                 } catch (error) {
                     setCrashCode("API_JSON_PARSE_ERROR");
                     setCrashed(true);
