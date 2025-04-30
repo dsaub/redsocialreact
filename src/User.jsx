@@ -17,11 +17,10 @@ function User() {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-        },
-        body: { username: data.username }
+        }
     };
     try {
-        fetch("/api/v1/getUser", requestOptions)
+        fetch("/api/v1/getUser?username=" + data.username, requestOptions)
         .then(response => {
             console.log(response);
 
