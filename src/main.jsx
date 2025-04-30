@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         element: <FatalError code="TEST_ERROR" status="500" />
     },
     {
-        path: '/404',
+        path: '*',
         element: <FatalError code="Not Found" status="404" />
     }
 ])
