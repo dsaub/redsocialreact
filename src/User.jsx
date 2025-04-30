@@ -8,6 +8,7 @@ function User() {
 
     const [ crashed, setCrashed ] = useState(false);
     const [ crashCode, setCrashCode ] = useState("GENERIC_ERROR_UNKNOWN");
+    const [ crashStatus, setCrashStatus ] = useState(500);
 
     let data = useLoaderData();
     let username = "";
@@ -27,6 +28,7 @@ function User() {
             if (response.status == 404) {
                 setCrashCode("API_404_ERROR");
                 setCrashed(true);
+                setCrashStatus(400);
             }
 
             if (response.status == 500) {
@@ -63,7 +65,7 @@ function User() {
                 <p id="username">@{username}</p>
             </main>
 
-            { crashed ? <FatalError code={ crashCode } /> : ''}
+            { crashed ? <FatalError code={ crashCode } status={ crashStatus } /> : ''}
         </div>
     )
 }

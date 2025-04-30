@@ -22,7 +22,11 @@ const router = createBrowserRouter([
     },
     {
         path: '/testError',
-        element: <FatalError code="TEST_ERROR" />
+        element: <FatalError code="TEST_ERROR" status="500" />
+    },
+    {
+        path: '/404',
+        element: <FatalError code="Not Found" status="404" />
     }
 ])
 createRoot(document.getElementById('root')).render(

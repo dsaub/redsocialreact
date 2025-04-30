@@ -6,7 +6,7 @@ function FatalError(props) {
             <div className="fullshadow"></div>
             <div 
                 id="fatalError">
-                <h1>Fatal Error</h1>
+                <h1>Error { props.status }</h1>
                 <p>Ha ocurrido un error interno en la aplicación</p>
                 <p>Codigo de error: { props.code }</p>
             </div>
