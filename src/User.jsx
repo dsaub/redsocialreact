@@ -18,7 +18,7 @@ function User() {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username: data.username })
+        body: { username: data.username }
     };
     try {
         fetch("/api/v1/getUser", requestOptions)
