@@ -36,18 +36,15 @@ function User() {
             }
 
             if (!crashed) {
-                try {
-                    let out = response.json();
-                    console.log(out)
-                    setUsername(out.value.username);
-                    setFullname(out.value.fullname);
-                } catch (error) {
-                    setCrashCode("API_JSON_PARSE_ERROR");
-                    setCrashed(true);
-                }
+                return response.json();
             }
             
-    });
+    })
+    .then(out => {
+        console.log(out)
+        setUsername(out.username);
+        setFullname(out.fullname);
+    })
 
         
     } catch (error) {
