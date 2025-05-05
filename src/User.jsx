@@ -54,7 +54,9 @@ function User() {
         setCrashCode("API_CONTACT_ERROR");
         setCrashed(true);
     }
-            
+    
+    console.log(username);
+    console.log(fullname);
     
     
 
