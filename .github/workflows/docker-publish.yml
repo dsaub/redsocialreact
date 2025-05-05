@@ -20,8 +20,8 @@ jobs:
           password: ${{secrets.TOKEN}}
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag ghcr.io/dsaub/redsocial-frontend:latest
-        docker push ghcr.io/dsaub/redsocial-frontend:latest
+        docker build . --file Dockerfile --tag ghcr.io/dsaub/redsocial-frontend:x86
+        docker push ghcr.io/dsaub/redsocial-frontend:x86
   build-arm64:
     runs-on: ubuntu-24.04-arm
 
@@ -35,5 +35,5 @@ jobs:
         password: ${{secrets.TOKEN}}
     - name: Build the Docker image
       run: |
-        docker build . --file Dockerfile --tag ghcr.io/dsaub/redsocial-frontend:latest
-        docker push ghcr.io/dsaub/redsocial-frontend:latest
+        docker build . --file Dockerfile --tag ghcr.io/dsaub/redsocial-frontend:arm64
+        docker push ghcr.io/dsaub/redsocial-frontend:arm64
