@@ -39,8 +39,8 @@ function User() {
                 try {
                     let out = response.json();
                     console.log(out)
-                    setUsername(out.username);
-                    setFullname(out.fullname);
+                    setUsername(out.value.username);
+                    setFullname(out.value.fullname);
                 } catch (error) {
                     setCrashCode("API_JSON_PARSE_ERROR");
                     setCrashed(true);
