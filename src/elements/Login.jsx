@@ -5,7 +5,7 @@ function Login() {
     return (
         <>
         <div className="fullshadow" ></div>
-            <form className="form" method="POST" action="/api/v1/login">
+            <form className="form" method="POST" action="/api/v1/login" enctype="application/json">
                 <div className="flex-column">
                     <label>Nombre de usuario </label></div>
                     <div className="inputForm">
